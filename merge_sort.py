@@ -25,7 +25,10 @@ def merge_sort(items):
     middle_index = len(items)//2
     left_split = items[:middle_index]
     right_split = items[middle_index:]
-    return middle_index, left_split, right_split
+    left_sorted = merge_sort(left_split)
+    right_sorted = merge_sort(right_split)
+
+    return merge(left_sorted, right_sorted)
 
 
 def merge(left, right):
