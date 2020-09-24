@@ -23,6 +23,7 @@ print("PRE SORT: {0}".format(nums))
 def bubble_sort(arr):
     iteration_count = 0
     for i in range(len(arr)):
+
         # iterate through unplaced elements, after every iteration in outerloop our inner loop shortens from behind.
         for idx in range(len(arr) - i - 1):
             iteration_count += 1
