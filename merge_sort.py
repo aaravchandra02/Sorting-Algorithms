@@ -49,9 +49,13 @@ def merge(left, right):
 """
 The whole sort takes up two functions:
 
-merge_sort() which is called recursively breaks down an input list to smaller, more manageable pieces. merge() which is a helper function built to help combine those broken-down lists into ordered combination lists.
+merge_sort() which is called recursively breaks down an input list to smaller, more manageable pieces. 
+merge() which is a helper function built to help combine those broken-down lists into ordered combination lists.
 
-merge_sort() continues to break down an input list until it only has one element and then it joins that with other single element lists to create sorted 2-element lists. Then it combines 2-element sorted lists into 4-element sorted lists. It continues that way until all the items of the lists are sorted!
+merge_sort() continues to break down an input list until it only has one element and then it joins that with 
+other single element lists to create sorted 2-element lists. 
+Then it combines 2-element sorted lists into 4-element sorted lists. 
+It continues that way until all the items of the lists are sorted!
 
 Only one thing left to do, test it out!
 """
