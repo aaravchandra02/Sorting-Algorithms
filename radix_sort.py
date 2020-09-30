@@ -22,8 +22,7 @@ Creating inner loop to outer funtionality.
     digit is sorted.
 
     Since we know that all of our input numbers are in digits we can safely clear out being_sorted. 
-    We’ll make it an empty list and then add back in all the numbers from digits as they appear.
-    
+    We’ll make it an empty list and then add back in all the numbers from digits as they appear.  
 """
 
 
