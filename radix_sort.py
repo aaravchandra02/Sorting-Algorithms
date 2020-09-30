@@ -18,7 +18,26 @@ def radix_sort(to_be_sorted):
     to create ten different buckets to put each number in.
     """
     digits = [[] for _ in range(10)]
-    print(digits)
+
+    """
+    The least significant digit radix sort algorithm takes each number in the input list, 
+    looks at the digits of that number in order from right to left, and incrementally 
+    stuffs each number into the bucket corresponding to the value of that digit. First 
+    we’re going to write this logic for the least significant digit, then we’re going 
+    to loop over the code we write to do that for every digit.
+    """
+
+    for number in being_sorted:
+        number_as_a_string = str(number)
+        # get the last element of a string
+        digit = number_as_a_string[-1]
+        # use digit as a list index for digits
+        digit = int(digit)
+        """
+        digits[digit] is an empty list (because digits has ten lists and digit is a number 
+        from 0 to 9). Add our number to that list.
+        """
+        digits[digit].append(number)
     return digits
 
 
