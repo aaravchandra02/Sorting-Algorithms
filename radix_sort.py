@@ -38,7 +38,26 @@ def radix_sort(to_be_sorted):
         from 0 to 9). Add our number to that list.
         """
         digits[digit].append(number)
-    return digits
+
+    """
+    For every iteration, radix sort renders a version of the input list that is sorted based on
+    the digit that was just looked at. At first pass, only the ones digit is sorted. At the second 
+    pass, the tens and the ones are sorted. This goes on until the digits in the largest position 
+    of the largest number in the list are all sorted, and the list is sorted at that time.
+    Here we’ll be rendering the list, at first, it will just return the list sorted so just the ones 
+    digit is sorted.
+
+    Since we know that all of our input numbers are in digits we can safely clear out being_sorted. 
+    We’ll make it an empty list and then add back in all the numbers from digits as they appear.
+    """
+
+    being_sorted = []
+    # Call each of these lists numeral because they each correspond to one specific numeral from 0 to 9
+    for numeral in digits:
+        # use the .extend() method (which appends all the elements of a list,
+        # instead of appending the list itself) to add the elements of numeral to being_sorted
+        being_sorted.extend(numeral)
+    return being_sorted
 
 
 radix_sort()
